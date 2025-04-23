@@ -11,16 +11,16 @@ export default function SobreScreen() {
       <TouchableOpacity onPress={() => Linking.openURL('https://www.linkedin.com/in/seu-linkedin')}>
         <Text style={styles.link}>LinkedIn</Text>
       </TouchableOpacity>
-    {/*
-      <Image source={require('./assets/dev2.png')} style={styles.devImage} />
-      <Text style={styles.name}>Vitor Ginza</Text>
+    
+      <Image source={require('../../assets/gabriel.jpeg')} style={styles.devImage} />
+      <Text style={styles.name}>Gabriel Gomez</Text>
       <TouchableOpacity onPress={() => Linking.openURL('https://www.instagram.com/seu-instagram')}>
         <Text style={styles.link}>Instagram</Text>
       </TouchableOpacity>
-  */}
 
       <Text style={styles.desc}>
         O EcoHome é um projeto desenvolvido com o objetivo de incentivar ações sustentáveis e educar a sociedade sobre o consumo consciente.
+        E melhorar a sua qualidade de vida.
       </Text>
     </ScrollView>
   );
