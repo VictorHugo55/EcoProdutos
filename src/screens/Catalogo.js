@@ -1,7 +1,7 @@
 import React from 'react';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export default function Catalogo() {
+export default function Catalogo({ navigation }) {
     return (
         <ScrollView contentContainerStyle={styles.container}>
             <Text style={styles.title}>Catálogo Verde</Text>
@@ -24,6 +24,13 @@ export default function Catalogo() {
                 <Text style={styles.productName}>Tomada Inteligente</Text>
                 <Text style={styles.productDesc}>Controle seus aparelhos pelo celular.</Text>
             </View>
+
+            <TouchableOpacity
+                style={styles.button}
+                onPress={() => navigation.navigate('ListaLojas')}
+            >
+                <Text style={styles.buttonText}>Ver Lojas</Text>
+            </TouchableOpacity>
         </ScrollView>
     );
 }
@@ -73,5 +80,17 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: '#555',
         textAlign: 'center'
+    },
+    button: {
+        backgroundColor: '#388e3c',
+        padding: 15,
+        borderRadius: 10,
+        marginTop: 20,
+        width: '80%',
+        alignItems: 'center',
+    },
+    buttonText: {
+        color: '#fff',
+        fontSize: 16,
     }
 });
