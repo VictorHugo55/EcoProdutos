@@ -18,6 +18,13 @@ export default function SobreScreen() {
         <Text style={styles.link}>Instagram</Text>
       </TouchableOpacity>
 
+      <Image source={require('../../assets/Juliana.jpeg')} style={styles.devImage} />
+      <Text style={styles.name}>Juliana de Andrade Sousa</Text>
+      <TouchableOpacity onPress={() => Linking.openURL('http://linkedin.com/in/juliana-de-andrade-6031ab303')}>
+        <Text style={styles.link}>Linkedin</Text>
+      </TouchableOpacity>
+
+
       <Text style={styles.desc}>
         O EcoHome é um projeto desenvolvido com o objetivo de incentivar ações sustentáveis e educar a sociedade sobre o consumo consciente.
         E melhorar a sua qualidade de vida.
