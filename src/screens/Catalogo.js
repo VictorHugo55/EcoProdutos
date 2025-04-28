@@ -36,10 +36,10 @@ export default function Catalogo({ navigation }) {
         <Text style={styles.productDesc}>Controle seus aparelhos pelo celular.</Text>
       </View>
 
-      {/* Botão para Onde Comprar */}
-      <TouchableOpacity style={styles.botaoComprar} onPress={() => navigation.navigate('OndeComprar')}>
-        <Text style={styles.botaoComprarTexto}>🛒 Onde Comprar</Text>
-      </TouchableOpacity>
+      <TouchableOpacity style={styles.botaoComprar} onPress={() => navigation.navigate('Desafios')}>
+        <Text style={styles.botaoComprarTexto}>🚀 Ver Desafios</Text>
+          </TouchableOpacity>
+
 
       {/* Botão para Lista de Lojas */}
       <TouchableOpacity style={styles.botaoLojas} onPress={() => navigation.navigate('ListaLojas')}>

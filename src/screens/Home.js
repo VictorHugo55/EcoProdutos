@@ -18,6 +18,12 @@ export default function Home({ navigation }) {
         <Text style={styles.buttonText}>Ver Catálogo Verde</Text>
       </TouchableOpacity>
 
+
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Desafios')}>
+        <Text style={styles.buttonText}>🚀 Desafios Sustentáveis</Text>
+      </TouchableOpacity>
+
+
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Dicas')}>
         <Text style={styles.buttonText}>Dicas Ecológicas</Text>
       </TouchableOpacity>

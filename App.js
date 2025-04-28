@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Cadastro from './src/screens/Cadastro'; 
 import OndeComprar from './src/screens/OndeComprar'; 
+import Desafios from './src/screens/Desafios';
 import Home from './src/screens/Home';
 import Catalogo from './src/screens/Catalogo';
 import Dicas from './src/screens/Dicas';
@@ -20,6 +21,7 @@ export default function App() {
         <Stack.Screen name="OndeComprar" component={OndeComprar} options={{ title: 'Onde Comprar' }} />
         <Stack.Screen name="Catalogo" component={Catalogo} options={{ title: 'Catálogo Verde' }} />
         <Stack.Screen name="Dicas" component={Dicas} options={{ title: 'Dicas Ecológicas' }} />
+        <Stack.Screen name="Desafios" component={Desafios} options={{ title: 'Desafios Sustentáveis' }} />
         <Stack.Screen name="Sobre" component={SobreScreen} options={{ title: 'Sobre o Projeto' }} />
         <Stack.Screen name="Clima" component={ClimaScreen} options={{ title: 'Clima Sustentável' }} />
         <Stack.Screen name="ListaLojas" component={ListaLojas} options={{ title: 'Lista de Lojas' }} />
