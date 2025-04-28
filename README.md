@@ -3,13 +3,13 @@
 Aplicativo mobile desenvolvido para promover o consumo sustentável e incentivar práticas ecológicas no dia a dia.
 
 ## 📱 Funcionalidades
-- Home: Tela de boas-vindas com acesso rápido às principais funcionalidades.
-- Cadastrar Produto: Cadastro de novos produtos sustentáveis.
-- Catálogo Verde: Lista de produtos ecológicos com imagens, descrição e acesso rápido.
-- Dicas Ecológicas: Sugestões práticas para hábitos sustentáveis.
-- Sobre o Projeto: Informações sobre a missão do EcoProdutos.
-- Clima Sustentável: Consulta ao clima atual por cidade usando a API OpenWeather.
-- Onde Comprar: Busca de mercados sustentáveis por cidade usando OpenStreetMap, exibição no mapa e integração com o Google Maps.
+- **Home**: Tela de boas-vindas com acesso rápido às principais funcionalidades.
+- **Cadastrar Produto**: Cadastro de novos produtos sustentáveis.
+- **Catálogo Verde**: Lista de produtos ecológicos com imagens, descrição e acesso rápido.
+- **Dicas Ecológicas**: Sugestões práticas para hábitos sustentáveis.
+- **Sobre o Projeto**: Informações sobre a missão do EcoProdutos.
+- **Clima Sustentável**: Consulta ao clima atual por cidade usando a API OpenWeather.
+- **Desafios Sustentáveis**: Página com desafios ecológicos diários/mensais para incentivar práticas sustentáveis, com a opção de marcar como concluído.
 
 ## 🔍 Tecnologias Utilizadas
 - React Native
@@ -22,11 +22,11 @@ Aplicativo mobile desenvolvido para promover o consumo sustentável e incentivar
 - JavaScript
 
 ## 🌎 Funcionalidade Principal Desenvolvida
-A tela "Onde Comprar" permite que o usuário busque mercados ecológicos na cidade informada:
-- Integração com a API gratuita OpenStreetMap (Nominatim).
-- Resultados exibidos tanto em lista quanto em mapa interativo (usando MapView).
-- Botão que abre a localização diretamente no Google Maps.
-- Layout responsivo e visual otimizado para mobile.
+A tela "Onde Comprar" (removida posteriormente) permitia buscar mercados sustentáveis.
+Atualmente, o foco principal está na experiência de:
+- Catálogo Verde interativo de produtos ecológicos.
+- Tela "Desafios Sustentáveis" com marcação de progresso.
+- Integração com mapa interativo para visualização de lojas sustentáveis (Lista de Lojas).
 
 ## 👥 Colaboradores
 - Gabriel Gomes
@@ -60,15 +60,21 @@ npm start
 ## 📸 Imagens do App
 - Tela Home
 - Tela Catálogo Verde
-- Tela Onde Comprar (com busca e mapa)
+- Tela Desafios Sustentáveis
 - Tela Clima Sustentável
+- Tela Lista de Lojas
 
 ## 🚀 Melhorias Futuras
+- Salvar desafios concluídos no AsyncStorage para manter o histórico.
 - Localização automática para buscar mercados próximos.
 - Cadastro de novos mercados sustentáveis.
 - Avaliação dos mercados ecológicos.
 - Dark Mode (modo escuro).
 - Integração com APIs de eficiência energética.
+- Melhorias visuais no layout geral.
 
 ## 📄 Licença
 Projeto desenvolvido para fins acadêmicos e de incentivo ao consumo consciente e sustentável.
+
+
+
