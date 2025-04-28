@@ -1,22 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ScrollView, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Desafios() {
   const [desafios, setDesafios] = useState([
     { id: 1, texto: "🌳 Plantar uma árvore essa semana", feito: false },
     { id: 2, texto: "🚲 Usar bicicleta para ir ao trabalho por um dia", feito: false },
     { id: 3, texto: "💡 Desligar as luzes ao sair de casa por uma semana", feito: false },
-    { id: 4, texto: "♻️ Separar lixo reciclável em casa por 7 dias", feito: false },
-    { id: 5, texto: "🛒 Levar sacola reutilizável para o mercado", feito: false },
-    { id: 6, texto: "🚿 Tomar banhos de no máximo 5 minutos por 3 dias", feito: false },
-    { id: 7, texto: "🛍️ Comprar de pequenos produtores locais", feito: false },
-    { id: 8, texto: "🚶‍♂️ Fazer uma caminhada ao invés de usar o carro", feito: false },
-    { id: 9, texto: "🍃 Plantar uma pequena horta em casa", feito: false },
-    { id: 10, texto: "🔌 Desligar aparelhos da tomada ao não usar", feito: false },
+    { id: 4, texto: "🌎 Participar de um mutirão de limpeza local", feito: false },
+    { id: 5, texto: "♻️ Separar corretamente o lixo reciclável por uma semana", feito: false },
   ]);
 
+  // Carregar desafios salvos no AsyncStorage
+  useEffect(() => {
+    const carregarDesafios = async () => {
+      try {
+        const dadosSalvos = await AsyncStorage.getItem('desafios');
+        if (dadosSalvos) {
+          setDesafios(JSON.parse(dadosSalvos));
+        }
+      } catch (error) {
+        console.log('Erro ao carregar desafios:', error);
+      }
+    };
+    carregarDesafios();
+  }, []);
+
+  // Salvar desafios atualizados
+  const salvarDesafios = async (dados) => {
+    try {
+      await AsyncStorage.setItem('desafios', JSON.stringify(dados));
+    } catch (error) {
+      console.log('Erro ao salvar desafios:', error);
+    }
+  };
+
+  // Marcar desafio como feito
   const marcarComoFeito = (id) => {
-    setDesafios(desafios.map(d => d.id === id ? { ...d, feito: true } : d));
+    const novosDesafios = desafios.map(d =>
+      d.id === id ? { ...d, feito: true } : d
+    );
+    setDesafios(novosDesafios);
+    salvarDesafios(novosDesafios);
+  };
+
+  // Refazer desafio
+  const refazerDesafio = (id) => {
+    const novosDesafios = desafios.map(d =>
+      d.id === id ? { ...d, feito: false } : d
+    );
+    setDesafios(novosDesafios);
+    salvarDesafios(novosDesafios);
   };
 
   return (
@@ -32,7 +66,12 @@ export default function Desafios() {
               <Text style={styles.botaoTexto}>✅ Marcar como feito</Text>
             </TouchableOpacity>
           ) : (
-            <Text style={styles.feito}>Desafio Concluído! 🎉</Text>
+            <>
+              <Text style={styles.feito}>🎉 Desafio Concluído!</Text>
+              <TouchableOpacity style={styles.botaoRefazer} onPress={() => refazerDesafio(desafio.id)}>
+                <Text style={styles.botaoTexto}>🔄 Refazer</Text>
+              </TouchableOpacity>
+            </>
           )}
         </View>
       ))}
@@ -48,11 +87,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   titulo: {
-    fontSize: 28,
+    fontSize: 26,
     fontWeight: 'bold',
     color: '#1b5e20',
     marginBottom: 20,
-    textAlign: 'center',
   },
   card: {
     backgroundColor: '#ffffff',
@@ -64,7 +102,6 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowRadius: 4,
-    shadowOffset: { width: 0, height: 2 },
     elevation: 3,
   },
   textoDesafio: {
@@ -74,10 +111,18 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   botao: {
-    backgroundColor: '#43a047',
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 8,
+    backgroundColor: '#388e3c',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    marginTop: 8,
+  },
+  botaoRefazer: {
+    backgroundColor: '#1e88e5',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    marginTop: 8,
   },
   botaoTexto: {
     color: '#fff',
@@ -87,5 +132,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     color: '#1b5e20',
     fontWeight: 'bold',
+    fontSize: 16,
   },
 });
