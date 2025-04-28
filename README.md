@@ -1,71 +1,74 @@
-EcoProdutos 🌿
+# EcoProdutos 🌿
 
 Aplicativo mobile desenvolvido para promover o consumo sustentável e incentivar práticas ecológicas no dia a dia.
 
-📱 Funcionalidades
-Home: Tela de boas-vindas com acesso rápido às principais funcionalidades.
+## 📱 Funcionalidades
+- Home: Tela de boas-vindas com acesso rápido às principais funcionalidades.
+- Cadastrar Produto: Cadastro de novos produtos sustentáveis.
+- Catálogo Verde: Lista de produtos ecológicos com imagens, descrição e acesso rápido.
+- Dicas Ecológicas: Sugestões práticas para hábitos sustentáveis.
+- Sobre o Projeto: Informações sobre a missão do EcoProdutos.
+- Clima Sustentável: Consulta ao clima atual por cidade usando a API OpenWeather.
+- Onde Comprar: Busca de mercados sustentáveis por cidade usando OpenStreetMap, exibição no mapa e integração com o Google Maps.
 
-Cadastrar Produto: Cadastro de novos produtos sustentáveis.
+## 🔍 Tecnologias Utilizadas
+- React Native
+- Expo
+- React Navigation
+- React Native Maps
+- OpenStreetMap API (Nominatim)
+- Google Maps (Link para rotas)
+- AsyncStorage
+- JavaScript
 
-Catálogo Verde: Lista de produtos ecológicos com imagens, descrição e acesso rápido.
+## 🌎 Funcionalidade Principal Desenvolvida
+A tela "Onde Comprar" permite que o usuário busque mercados ecológicos na cidade informada:
+- Integração com a API gratuita OpenStreetMap (Nominatim).
+- Resultados exibidos tanto em lista quanto em mapa interativo (usando MapView).
+- Botão que abre a localização diretamente no Google Maps.
+- Layout responsivo e visual otimizado para mobile.
 
-Dicas Ecológicas: Sugestões práticas para hábitos sustentáveis.
+## 👥 Colaboradores
+- Gabriel Gomes
+- Juliana de Andrade
+- Victor Hugo
 
-Sobre o Projeto: Informações sobre a missão do EcoProdutos.
+## 📥 Como Rodar o Projeto
 
-Clima Sustentável: Consulta ao clima atual por cidade.
-
-Onde Comprar: Busca de mercados sustentáveis por cidade com exibição no mapa e integração com Google Maps.
-
-🔍 Tecnologias Utilizadas
-React Native
-
-Expo
-
-React Native Maps
-
-OpenStreetMap API (Nominatim)
-
-Google Maps API (link de localização)
-
-JavaScript
-🌎 Funcionalidade Principal Desenvolvida
-
-A tela "Onde Comprar" permite que o usuário busque mercados ecológicos na sua cidade:
-
-Integração com API pública gratuita (OpenStreetMap).
-
-Resultados exibidos tanto em lista quanto em mapa.
-
-Botão para abrir a localização diretamente no Google Maps.
-
-Layout responsivo e visual moderno.
-
-👥 Colaboradores
-Gabriel Gomes 
-
-Juliana de Andrade	
-
-Victor Hugo	
-
-📥 Como Rodar o Projeto
-Clone o repositório:
-
+1. Clone o repositório:
+```bash
 git clone https://github.com/VictorHugo55/EcoProdutos.git
+```
 
-Acesse a pasta:
+2. Acesse a pasta do projeto:
+```bash
 cd EcoProdutos
+```
 
-Instale as dependências:
+3. Instale as dependências:
+```bash
 npm install
+```
 
-Inicie o projeto:
+4. Inicie o projeto:
+```bash
 npm start
+```
 
-Rode no seu emulador Android ou dispositivo físico via QR Code do Expo.
-📸 Imagens do App
-Tela Home
-Tela Catálogo Verde
-Tela Onde Comprar (com mapa e busca)
-Tela Clima Sustentável
+5. Execute no seu celular com o app **Expo Go** ou emulador Android.
 
+## 📸 Imagens do App
+- Tela Home
+- Tela Catálogo Verde
+- Tela Onde Comprar (com busca e mapa)
+- Tela Clima Sustentável
+
+## 🚀 Melhorias Futuras
+- Localização automática para buscar mercados próximos.
+- Cadastro de novos mercados sustentáveis.
+- Avaliação dos mercados ecológicos.
+- Dark Mode (modo escuro).
+- Integração com APIs de eficiência energética.
+
+## 📄 Licença
+Projeto desenvolvido para fins acadêmicos e de incentivo ao consumo consciente e sustentável.
