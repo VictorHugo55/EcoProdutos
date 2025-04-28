@@ -11,30 +11,29 @@ export default function Home({ navigation }) {
       <Text style={styles.subtitle}>Juntos por um futuro mais sustentável!</Text>
 
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Cadastro')}>
-        <Text style={styles.buttonText}>Cadastrar Produto</Text>
+        <Text style={styles.buttonText}>🛒 Cadastrar Produto</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Catalogo')}>
-        <Text style={styles.buttonText}>Ver Catálogo Verde</Text>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Catalogo')}>
+          <Text style={styles.buttonText}>📗 Ver Catálogo Verde</Text>
+        </TouchableOpacity>
 
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Desafios')}>
+          <Text style={styles.buttonText}>🚀 Desafios Sustentáveis</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Desafios')}>
-        <Text style={styles.buttonText}>🚀 Desafios Sustentáveis</Text>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Dicas')}>
+          <Text style={styles.buttonText}>♻️ Dicas Ecológicas</Text>
+        </TouchableOpacity>
 
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Sobre')}>
+          <Text style={styles.buttonText}>ℹ️ Sobre o Projeto</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Dicas')}>
-        <Text style={styles.buttonText}>Dicas Ecológicas</Text>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Clima')}>
+          <Text style={styles.buttonText}>🌤 Clima Sustentável</Text>
+        </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Sobre')}>
-        <Text style={styles.buttonText}>Sobre o Projeto</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Clima')}>
-        <Text style={styles.buttonText}>🌤 Clima Sustentável</Text>
-      </TouchableOpacity>
     </ScrollView>
   );
 }
