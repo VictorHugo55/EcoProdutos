@@ -1,4 +1,5 @@
 EcoProdutos 🌿
+
 Aplicativo mobile desenvolvido para promover o consumo sustentável e incentivar práticas ecológicas no dia a dia.
 
 📱 Funcionalidades
@@ -29,25 +30,35 @@ Google Maps API (link de localização)
 
 JavaScript
 🌎 Funcionalidade Principal Desenvolvida
+
 A tela "Onde Comprar" permite que o usuário busque mercados ecológicos na sua cidade:
+
 Integração com API pública gratuita (OpenStreetMap).
+
 Resultados exibidos tanto em lista quanto em mapa.
+
 Botão para abrir a localização diretamente no Google Maps.
 
 Layout responsivo e visual moderno.
 
 👥 Colaboradores
 Gabriel Gomes 
+
 Juliana de Andrade	
+
 Victor Hugo	
 
 📥 Como Rodar o Projeto
 Clone o repositório:
+
 git clone https://github.com/VictorHugo55/EcoProdutos.git
+
 Acesse a pasta:
 cd EcoProdutos
+
 Instale as dependências:
 npm install
+
 Inicie o projeto:
 npm start
 
