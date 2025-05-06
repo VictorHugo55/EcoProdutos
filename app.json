@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ArmazenamentoLocal",
-    "slug": "ArmazenamentoLocal",
+    "name": "EcoProdutos",
+    "slug": "EcoProdutos",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/home-eco.png",
